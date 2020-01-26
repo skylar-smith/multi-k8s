@@ -9,5 +9,5 @@ docker push savvyskylark/multi-server:$SHA
 docker push savvyskylark/multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=savvyskylark/multi-server:$SHA
-kubectl set image deployments/client-deployment server=savvyskylark/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=savvyskylark/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=savvyskylark/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=savvyskylark/multi-worker:$SHA
